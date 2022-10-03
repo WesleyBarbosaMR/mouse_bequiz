@@ -14,28 +14,97 @@ class ScoreScreen extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+          Image.asset(
+            "assets/imgs/bg.jpg",
+            fit: BoxFit.cover,
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Spacer(flex: 2),
+              Spacer(flex: 3),
               _qnController.correctAns == 0
-                  ? Text(
-                      "Ah! Que pena!\nTodos os ratinhos se foram",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline4
-                          ?.copyWith(color: kSecondaryColor),
-                      textAlign: TextAlign.center,
+                  ? Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Ah! Que pena!\nTodos os ratinhos se foram",
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline4
+                              ?.copyWith(color: kSecondaryColor),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.04,
+                        ),
+                        Image.asset(
+                          "assets/imgs/game-over.png",
+                          fit: BoxFit.cover,
+                          width: 250,
+                          height: 250,
+                        ),
+                      ],
                     )
-                  : Text(
-                      "Parabéns!\nvocê salvou os ratinhos",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline4
-                          ?.copyWith(color: kSecondaryColor),
-                      textAlign: TextAlign.center,
+                  : Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(24.0),
+                          child: Text(
+                            "Parabéns!\nvocê salvou os ratinhos",
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline4
+                                ?.copyWith(color: kSecondaryColor),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.04,
+                        ),
+                        Image.asset(
+                          "assets/imgs/cheese.png",
+                          fit: BoxFit.cover,
+                          width: 100,
+                          height: 100,
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.02,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Image.asset(
+                              "assets/imgs/rato1-queijo.png",
+                              fit: BoxFit.cover,
+                              width: 100,
+                              height: 100,
+                            ),
+                            Image.asset(
+                              "assets/imgs/filhote-queijo.png",
+                              fit: BoxFit.cover,
+                              width: 65,
+                              height: 65,
+                            ),
+                            Image.asset(
+                              "assets/imgs/filhote-queijo.png",
+                              fit: BoxFit.cover,
+                              width: 65,
+                              height: 65,
+                            ),
+                            Image.asset(
+                              "assets/imgs/rato2-queijo.png",
+                              fit: BoxFit.cover,
+                              width: 100,
+                              height: 100,
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
               // * Adicionar parabenização ou "que pena" dependendo resultado do quiz, junto com a imagem das lápides
               Spacer(flex: 1),
