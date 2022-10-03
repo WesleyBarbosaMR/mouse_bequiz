@@ -20,7 +20,10 @@ class Body extends StatelessWidget {
     return Stack(
       fit: StackFit.expand,
       children: [
-        SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
+        Image.asset(
+          "assets/imgs/bg.jpg",
+          fit: BoxFit.cover,
+        ),
         SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
