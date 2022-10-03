@@ -11,9 +11,9 @@ class WelcomeScreen extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          SvgPicture.asset(
-            "assets/icons/bg.svg",
-            fit: BoxFit.fill,
+          Image.asset(
+            "assets/imgs/bg.jpg",
+            fit: BoxFit.cover,
           ),
           SafeArea(
             child: Padding(
@@ -29,14 +29,39 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Text(
                       "Aprenda um pouco sobre o behaviorismo\ncom a família de ratinhos"),
-                  Spacer(), // 1/6
+                  Spacer(),
+                  /*Image.asset(
+                    "assets/imgs/rato1-feliz.png",
+                    fit: BoxFit.cover,
+                  ),
+                  */ // 1/6
                   TextField(
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Color(0xFF1C2341),
                       labelText: 'Nome do Jogador',
+                      labelStyle: TextStyle(
+                        color: kPrimaryColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                      ),
+                      floatingLabelStyle: TextStyle(
+                        color: kPrimaryColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                      ),
                       hintText: "Insira aqui o seu nome",
+                      hintStyle: TextStyle(
+                        color: kSecondaryColor,
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: kSecondaryColor, width: 2),
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                      ),
                       border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: kSecondaryColor, width: 2),
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                     ),
@@ -56,6 +81,28 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                       child: Text(
                         "Começar o quiz".toUpperCase(),
+                        style: Theme.of(context)
+                            .textTheme
+                            .button
+                            ?.copyWith(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.04,
+                  ),
+                  InkWell(
+                    onTap: () => Get.to(QuizScreen()),
+                    child: Container(
+                      width: double.infinity,
+                      alignment: Alignment.center,
+                      padding: EdgeInsets.all(kDefaultPadding * 1), // 15
+                      decoration: BoxDecoration(
+                        gradient: kSecondaryGradient,
+                        borderRadius: BorderRadius.all(Radius.circular(12)),
+                      ),
+                      child: Text(
+                        "O que é Behaviorismo ?".toUpperCase(),
                         style: Theme.of(context)
                             .textTheme
                             .button
