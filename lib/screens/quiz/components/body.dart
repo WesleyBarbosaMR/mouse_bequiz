@@ -65,8 +65,15 @@ class Body extends StatelessWidget {
                   controller: _questionController.pageController,
                   onPageChanged: _questionController.updateTheQnNum,
                   itemCount: _questionController.questions.length,
-                  itemBuilder: (context, index) => QuestionCard(
-                      question: _questionController.questions[index]),
+                  itemBuilder: (context, index) => SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        QuestionCard(
+                            question: _questionController.questions[index]),
+                            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ],
