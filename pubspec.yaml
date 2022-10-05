@@ -29,6 +29,8 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  bulleted_list: ^0.0.1+0.1a
+  carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
@@ -36,11 +38,6 @@ dependencies:
   get: ^4.6.5
 
 dev_dependencies:
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
@@ -55,7 +52,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/icons/
     - assets/imgs/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

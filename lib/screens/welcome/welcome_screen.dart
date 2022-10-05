@@ -1,3 +1,4 @@
+import 'package:Mouse_BeQuiz/screens/help/help.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -157,7 +158,7 @@ class WelcomeScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: InkWell(
-                        onTap: () => Get.to(QuizScreen()),
+                        onTap: () => Get.to(HelpScreen()),
                         child: Container(
                           width: double.infinity,
                           alignment: Alignment.center,
