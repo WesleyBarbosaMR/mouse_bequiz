@@ -37,26 +37,37 @@ class Body extends StatelessWidget {
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                child: Obx(
-                  () => Text.rich(
-                    TextSpan(
-                      text:
-                          "Questão ${_questionController.questionNumber.value}",
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline3
-                          ?.copyWith(color: kSecondaryColor),
-                      children: [
+                child: Row(
+                  children: [
+                    Obx(
+                      () => Text.rich(
                         TextSpan(
-                          text: "/${_questionController.questions.length}",
+                          text:
+                              "Questão ${_questionController.questionNumber.value}",
                           style: Theme.of(context)
                               .textTheme
-                              .headline5
+                              .headline3
                               ?.copyWith(color: kSecondaryColor),
+                          children: [
+                            TextSpan(
+                              text: "/${_questionController.questions.length}",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline5
+                                  ?.copyWith(color: kSecondaryColor),
+                            ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
-                  ),
+                    SizedBox(width:20),
+                    Image.asset(
+                          "assets/imgs/ratos-presos.png",
+                          fit: BoxFit.cover,
+                          width: 120,
+                          height: 85,
+                        ),
+                  ],
                 ),
               ),
               Divider(thickness: 1.5),

@@ -1,3 +1,5 @@
+import 'package:Mouse_BeQuiz/screens/quiz/quiz_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
@@ -41,6 +43,8 @@ class QuestionController extends GetxController
   int _numOfCorrectAns = 0;
   int get numOfCorrectAns => this._numOfCorrectAns;
 
+  bool ansCorrect = false;
+
   @override
   void onInit() {
     _animationController =
@@ -69,7 +73,12 @@ class QuestionController extends GetxController
     _correctAns = question.answer;
     _selectedAns = selectedIndex;
 
-    if (_correctAns == _selectedAns) _numOfCorrectAns++;
+    if (_correctAns == _selectedAns) { 
+      _numOfCorrectAns++;
+      ansCorrect = true;
+    } else {
+      ansCorrect = false;
+    }
 
     // It will stop the counter
     _animationController!.stop();

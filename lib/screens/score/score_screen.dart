@@ -23,7 +23,7 @@ class ScoreScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Spacer(flex: 3),
-              _qnController.correctAns == 0
+              _qnController.numOfCorrectAns < 4
                   ? Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -119,7 +119,7 @@ class ScoreScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.04,
               ),
               Text(
-                "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
+                "${_qnController.numOfCorrectAns * 10}/${_qnController.questions.length * 10}",
                 style: Theme.of(context)
                     .textTheme
                     .headline4
