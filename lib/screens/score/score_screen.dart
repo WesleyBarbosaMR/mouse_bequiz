@@ -88,13 +88,13 @@ class ScoreScreen extends StatelessWidget {
                               "assets/imgs/filhote-queijo.png",
                               fit: BoxFit.cover,
                               width: 65,
-                              height: 65,
+                              height: 85,
                             ),
                             Image.asset(
                               "assets/imgs/filhote-queijo.png",
                               fit: BoxFit.cover,
                               width: 65,
-                              height: 65,
+                              height: 85,
                             ),
                             Image.asset(
                               "assets/imgs/rato2-queijo.png",

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Mouse BeQuiz',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      //theme: ThemeData.dark(),
       home: WelcomeScreen(),
     );
   }
