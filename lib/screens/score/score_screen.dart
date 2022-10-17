@@ -23,7 +23,7 @@ class ScoreScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Spacer(flex: 3),
-              _qnController.correctAns == 0
+              _qnController.numOfCorrectAns < 4
                   ? Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
