@@ -69,19 +69,6 @@ class QuestionCard extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      actions: [
-        TextButton(
-          child: Text(
-            "OK",
-            style: TextStyle(color: Colors.white),
-          ),
-          style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.transparent)),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-      ],
     );
     showDialog(
       context: context,

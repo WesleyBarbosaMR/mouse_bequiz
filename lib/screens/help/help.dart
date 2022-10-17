@@ -1088,6 +1088,204 @@ class _HelpScreenState extends State<HelpScreen> {
                             ),
                           ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Card(
+                            elevation: 6.0,
+                            //shadowColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(30.0),
+                              ),
+                              child: Stack(
+                                children: <Widget>[
+                                  Center(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(24),
+                                      child: SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Esquemas de reforçamento - Parte 4',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'Reforço Intermitente: ',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'É por este motivo que há 4 diferentes tipos de Reforçamento Intermitente. São eles: Razão Fixa, Razão Variável, Intervalo Fixo e Intervalo Variável.',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.normal),
+                                            ),
+                                            Text(
+                                              'Razão Fixa (FR):',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'O número de respostas exigido para cada reforço é sempre o mesmo. Exemplo: A cada 5 respostas, 1 reforço: A cada 5 “vistos” no caderno pela professora, a criança ganha 1 estrela.',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.normal),
+                                            ),
+                                            Text(
+                                              'Razão Variável (VR)',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'O número de respostas exigido para cada reforço varia. Exemplo: A cada 22 respostas, 1 reforço. A cada 18 respostas, 1 reforço. A cada 31 respostas, 1 reforço: Engraxar sapatos reforça ao engraxate R\$15,00 ao término da atividade, porém no primeiro sapato ele movimentou as mãos por 22 vezes, no segundo foram necessárias 18 vezes e, no último, 31 vezes. NOTA: É muito usual falar em padrões variáveis através de médias. Neste exemplo, 22 + 18 + 31 = 71 / 3 = 23.6, ou seja, VR: 24 (Razão Variável: 24)',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.normal),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Card(
+                            elevation: 6.0,
+                            //shadowColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(30.0),
+                              ),
+                              child: Stack(
+                                children: <Widget>[
+                                  Center(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(24),
+                                      child: SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Esquemas de reforçamento - Parte 5',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline5
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'Reforço Intermitente: ',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'Intervalo Fixo (FI):',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'O tempo decorrido desde o último reforçamento é sempre o mesmo. Exemplo: A cada 24h, 1 reforço. Ligar a TV diariamente às 21h para assistir a novela e ser reforçado quando ela é exibida. Perceba que não importa se, durante as 24h, o organismo ligou a TV, pois ele só será reforçado no tempo exato.',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.normal),
+                                            ),
+                                            Text(
+                                              'Intervalo Variável (VI):',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                            ),
+                                            Text(
+                                              'O tempo decorrido desde o último reforçamento varia. Exemplo: A cada 8 minutos, 1 reforço. A cada 4 minutos, 1 reforço. A cada 12 minutos, 1 reforço. Durante um filme o sujeito prefere as cenas de comédia e elas aparecem intermitentemente em intervalos variados, o reforçando a permanecer assistindo. NOTA: É muito usual falar em padrões variáveis através de médias. Neste exemplo, 8’ + 4’ + 12’ = 24’ / 3 = 8’, ou seja, VI: 8’ (Intervalo Variável: 8’)',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .headline6
+                                                  ?.copyWith(
+                                                      color: Colors.black87,
+                                                      fontWeight:
+                                                          FontWeight.normal),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
                       ]),
 
                   Padding(
