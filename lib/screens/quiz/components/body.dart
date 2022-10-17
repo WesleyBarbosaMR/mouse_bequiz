@@ -46,27 +46,26 @@ class Body extends StatelessWidget {
                               "Questão ${_questionController.questionNumber.value}",
                           style: Theme.of(context)
                               .textTheme
-                              .headline3
+                              .headline4
                               ?.copyWith(color: kSecondaryColor),
                           children: [
                             TextSpan(
                               text: "/${_questionController.questions.length}",
                               style: Theme.of(context)
                                   .textTheme
-                                  .headline5
+                                  .headline6
                                   ?.copyWith(color: kSecondaryColor),
                             ),
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(width:20),
                     Image.asset(
-                          "assets/imgs/ratos-presos.png",
-                          fit: BoxFit.cover,
-                          width: 120,
-                          height: 85,
-                        ),
+                      "assets/imgs/ratos-presos.png",
+                      fit: BoxFit.cover,
+                      width: MediaQuery.of(context).size.width * 0.55,
+                      height: MediaQuery.of(context).size.height * 0.2,
+                    ),
                   ],
                 ),
               ),
@@ -84,7 +83,8 @@ class Body extends StatelessWidget {
                       children: [
                         QuestionCard(
                             question: _questionController.questions[index]),
-                            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.04),
                       ],
                     ),
                   ),
