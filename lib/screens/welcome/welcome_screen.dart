@@ -42,8 +42,18 @@ class WelcomeScreen extends StatelessWidget {
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                         ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.02,
+                        ),
                         Text(
-                            "Aprenda um pouco sobre o behaviorismo\ncom a família de ratinhos"),
+                          "Salve a família de ratinhos,\nusando seus conhecimentos sobre o behaviorismo",
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline6
+                              ?.copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.normal),
+                        ),
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.06,
                         ),
@@ -64,13 +74,13 @@ class WelcomeScreen extends StatelessWidget {
                         "assets/imgs/filhote-feliz.png",
                         fit: BoxFit.cover,
                         width: 50,
-                        height: 50,
+                        height: 70,
                       ),
                       Image.asset(
                         "assets/imgs/filhote-feliz.png",
                         fit: BoxFit.cover,
                         width: 50,
-                        height: 50,
+                        height: 70,
                       ),
                       Image.asset(
                         "assets/imgs/rato2-feliz.png",

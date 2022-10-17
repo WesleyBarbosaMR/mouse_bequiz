@@ -57,14 +57,31 @@ class QuestionCard extends StatelessWidget {
     String errorText = "Errou! Cuidado um ratinho foi levado.";
     String correctText = "Acertou! Os ratinhos foram alimentados.";
     AlertDialog alerta = AlertDialog(
-      title: Text( qc.ansCorrect ? correctText : errorText, textAlign: TextAlign.center,),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+      backgroundColor: Colors.black54,
+      title: Text(qc.ansCorrect ? correctText : errorText,
+          textAlign: TextAlign.center, style: TextStyle(color: Colors.white)),
       content: Padding(
-        padding: const EdgeInsets.only(top: 20, right:8.0, left:8.0, bottom: 8.0),
+        padding:
+            const EdgeInsets.only(top: 20, right: 8.0, left: 8.0, bottom: 8.0),
         child: Image.asset(
           qc.ansCorrect ? correct : error,
           fit: BoxFit.cover,
         ),
       ),
+      actions: [
+        TextButton(
+          child: Text(
+            "OK",
+            style: TextStyle(color: Colors.white),
+          ),
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.transparent)),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
     );
     showDialog(
       context: context,
