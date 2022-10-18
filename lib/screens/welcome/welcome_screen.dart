@@ -1,3 +1,4 @@
+import 'package:Mouse_BeQuiz/screens/credits.dart';
 import 'package:Mouse_BeQuiz/screens/help/help.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -100,7 +101,7 @@ class WelcomeScreen extends StatelessWidget {
                         keyboardType: TextInputType.name,
                         decoration: InputDecoration(
                           filled: true,
-                          fillColor: Color(0xFF1C2341),
+                          fillColor: Color.fromARGB(255, 216, 216, 216),
                           labelText: 'Nome do Jogador',
                           labelStyle: TextStyle(
                             color: kSecondaryColor,
@@ -179,6 +180,30 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                           child: Text(
                             "O que é Behaviorismo ?".toUpperCase(),
+                            style: Theme.of(context)
+                                .textTheme
+                                .button
+                                ?.copyWith(color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: InkWell(
+                        onTap: () => Get.to(CreditsScreen()),
+                        child: Container(
+                          width: double.infinity,
+                          alignment: Alignment.center,
+                          padding: EdgeInsets.all(kDefaultPadding * 1), // 15
+                          decoration: BoxDecoration(
+                            gradient: kGrayGradient,
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                          ),
+                          child: Text(
+                            "Créditos".toUpperCase(),
                             style: Theme.of(context)
                                 .textTheme
                                 .button
