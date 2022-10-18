@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Mouse BeQuiz',
       debugShowCheckedModeBanner: false,
-      //theme: ThemeData.dark(),
       home: StoryTelling(
         videoUrl: 'assets/movies/story-telling-squeaks-family.mp4',
       ),

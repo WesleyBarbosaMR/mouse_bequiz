@@ -37,7 +37,11 @@ class _StoryTellingState extends State<StoryTelling> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Get.to(WelcomeScreen()),
+        onPressed: () {
+          Get.to(WelcomeScreen());
+          controller.pause();
+          controller.dispose;
+        },
         backgroundColor: kPrimaryColor,
         child: Container(
           width: MediaQuery.of(context).size.width * 0.6,
